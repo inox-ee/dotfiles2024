@@ -1,5 +1,9 @@
 # Setting some applications
 
+# starship
+export STARSHIP_CONFIG="$ZDOTDIR"/.config/starship.toml
+eval "$(starship init zsh)"
+
 # fzf
 [ -f $ZDOTDIR/.config/.fzf.zsh ] && source $ZDOTDIR/.config/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 60% --reverse --border'

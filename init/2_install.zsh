@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# install [starship](https://starship.rs/ja-jp/)
+if ! whence -w starship; then
+  curl -sS https://starship.rs/install.sh | sh
+fi
+
 # install [fzf](https://github.com/junegunn/fzf)
 if ! [ -d $HOME/.fzf ]; then
   git clone -q --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
