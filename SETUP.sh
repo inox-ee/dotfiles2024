@@ -5,6 +5,10 @@ printfex() {
 }
 
 # precheck
+if ! [ "$ZDOTDIR" ]; then
+    printfex "Set \$ZDOTDIR" && exit 0
+fi
+
 while true; do
     printf "Do you want to execute dotfile-setup? (y/N) " >&2
     read -r yn
@@ -13,11 +17,8 @@ while true; do
     [Nn]*) echo "Bye." && exit 0 ;;
     *) echo "Please answer Yy or Nn." ;;
     esac
+    sed -i 's/export DOT_SETUPED=treu/export DOT_SETUPED=false/' $ZDOTDIR/.zshenv
 done
-
-if ! [ "$ZDOTDIR" ]; then
-    printfex "Set \$ZDOTDIR" && exit 0
-fi
 
 os_type=$(uname -s)
 if ! [ "$os_type" = "Linux" ] && ! [ "$os_type" = "Darwin" ]; then

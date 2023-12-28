@@ -1,1 +1,1 @@
-export DOT_SETUPED=false
+export DOT_SETUPED=true
