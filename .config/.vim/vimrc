@@ -1,0 +1,34 @@
+set fenc=utf-8
+set nocompatible
+set noswapfile
+set showcmd
+set viminfo+=n$ZDOTDIR/.config/.vim/.viminfo
+
+set visualbell t_vb=
+
+set number
+set showmatch
+set laststatus=2
+
+set list
+set listchars=tab:>-,trail:.,eol:↵
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set paste
+
+syntax on
+set background=dark
+colorscheme hybrid
+set t_Co=256
+
+set ignorecase
+set smartcase
+set incsearch
+set wrapscan
+set hlsearch
+
+imap [ []<left>
+imap ( ()<left>
+imap { {}<left>

@@ -1,0 +1,21 @@
+- name: python
+  version: 3.12.1
+  packages:
+    - command: "pip install -U"
+      list:
+        - pipenv
+- name: golang
+  version: 1.21.5
+  packages:
+    - command: "go install"
+      list:
+        - ""
+- name: nodejs
+  version: 20.10.0
+  packages:
+    - command: "npm install -g"
+      #precommand: "bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
+      list:
+        - ""
+- name: fzf
+  version: 0.44.1
