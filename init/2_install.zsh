@@ -26,7 +26,7 @@ if ! whence -w tree; then
     if [ "$(uname -s)" = "Linux" ]; then
         sudo apt install -y -qq tree
     elif [ "$(uname -s)" = "Darwin" ]; then
-        sudo brew install -q tree
+        brew install -q tree
     fi
 fi
 
@@ -35,6 +35,6 @@ if ! whence -w unbuffer; then
     if [ "$(uname -s)" = "Linux" ]; then
         sudo apt install -y -qq expect
     elif [ "$(uname -s)" = "Darwin" ]; then
-        sudo brew install -q expect
+        brew install -q expect
     fi
 fi

@@ -17,7 +17,7 @@ while true; do
     [Nn]*) echo "Bye." && exit 0 ;;
     *) echo "Please answer Yy or Nn." ;;
     esac
-    sed -i 's/export DOT_SETUPED=treu/export DOT_SETUPED=false/' $ZDOTDIR/.zshenv
+    sed -i "" 's/export DOT_SETUPED=treu/export DOT_SETUPED=false/' "$ZDOTDIR"/.zshenv
 done
 
 os_type=$(uname -s)
@@ -37,10 +37,10 @@ update_pkg() {
             sudo apt upgrade -qq
         fi
     elif [ "$os_type" = "Darwin" ]; then
-        sudo brew update -q
+        brew update -q
         if [ "$1" = true ]; then
             printfex "Upgrade packages"
-            sudo brew upgrade -q
+            brew upgrade -q
         fi
     fi
 }
@@ -53,7 +53,7 @@ install_zsh() {
     printfex "Install zsh"
     case "$os_type" in
     "Linux") sudo apt -qq -y install zsh ;;
-    "Darwin") sudo brew install -q zsh ;;
+    "Darwin") brew install -q zsh ;;
     esac
 }
 type zsh >/dev/null 2>&1 || install_zsh

@@ -1,9 +1,18 @@
 # Aliases
-alias ls='ls --group-directories-first --human-readable --color -F'
+if [ "$(uname)" = 'Darwin' ]; then
+  alias ls='gls --group-directories-first --human-readable --color -F'
+else
+  alias ls='ls --group-directories-first --human-readable --color -F'
+fi
 alias l='ls -la'
 alias rm='echo "This is not the command you are looking for."; false'
 alias ln='ln -iv'
 alias cl='clear'
+
+## VSCode
+if [ "$(uname)" = 'Darwin' ]; then
+  alias code='open -a "Visual Studio Code"'
+fi
 
 ## Ruby
 alias ber='bundle exec rails'

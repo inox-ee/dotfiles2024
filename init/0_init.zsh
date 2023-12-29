@@ -5,7 +5,7 @@ printfex() {
 }
 
 # create symlink
-TARGET=(".gitconfig" ".vim" ".tmux.conf" ".asdf.yml")
+TARGET=(".gitconfig" ".vim" ".tmux.conf" ".asdf.yml" ".alacritty.toml")
 for i in $TARGET; do
   ! [ -h "$HOME"/$i ] && ln -siv "$ZDOTDIR"/.config/$i "$HOME"
 done

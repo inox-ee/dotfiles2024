@@ -58,7 +58,7 @@ format = "[$hostname](green): "
 trim_at = "."
 
 [directory]
-disable = false
+disabled = false
 truncation_length = 3
 truncation_symbol = '…/'
 truncate_to_repo = false

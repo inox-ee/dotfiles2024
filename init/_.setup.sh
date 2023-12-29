@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 
 setup_scripts="${ZDOTDIR}/init"
 if [ -d "$setup_scripts" ] && [ -r "$setup_scripts" ] && [ -x "$setup_scripts" ]; then

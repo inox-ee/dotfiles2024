@@ -5,6 +5,6 @@ printfex() {
 }
 
 printfex "Rewrite DOT_SETUPED"
-sed -i 's/export DOT_SETUPED=false/export DOT_SETUPED=true/' $ZDOTDIR/.zshenv
+sed -i "" 's/export DOT_SETUPED=false/export DOT_SETUPED=true/' $ZDOTDIR/.zshenv
 
 exec zsh
