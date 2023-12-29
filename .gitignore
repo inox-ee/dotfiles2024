@@ -1,0 +1,14 @@
+# zsh autocreate
+.zhistory
+.zcompdump
+.chpwd-recent-dirs
+
+# vim config
+.config/.vim/*
+!.config/.vim/vimrc
+!.config/.vim/colors/
+.config/.vim/colors/*
+!.config/.vim/colors/.gitkeep
+
+# alacritty color theme
+.config/alacritty/themes
