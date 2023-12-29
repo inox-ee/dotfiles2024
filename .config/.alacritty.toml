@@ -36,3 +36,24 @@ white   = '#ffffff'
 
 [selection]
 save_to_clipboard = true
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "Q"
+mods = "Control"
+chars = "\u0011"
+
+[[keyboard.bindings]]
+key = "Semicolon"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
