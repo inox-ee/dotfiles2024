@@ -16,14 +16,15 @@ zstyle ':chpwd:*' recent-dirs-max 100
 zstyle ':chpwd:*' recent-dirs-default yes
 
 # zinit completion
-autoload -U compinit
-compinit -u
+# ? comment out because they spend a little bit time to load
+# autoload -U compinit
+# compinit -u
 zstyle ':completion:*' recent-dirs-insert both
-zstyle ':completion:*' list-colors "${LS_COLORS}"
-zstyle ':completion:*:default' menu select=1
-zstyle ':completion::complete:*' use-cache true
-setopt complete_in_word
-zmodload -i zsh/complist
+# zstyle ':completion:*' list-colors "${LS_COLORS}"
+# zstyle ':completion:*:default' menu select=1
+# zstyle ':completion::complete:*' use-cache true
+# setopt complete_in_word
+# zmodload -i zsh/complist
 
 setopt correct
 SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "
