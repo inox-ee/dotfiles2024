@@ -1,66 +1,79 @@
 add_newline = true
 scan_timeout = 10
 format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$package\
-$container\
-$golang\
-$helm\
-$nodejs\
-$pulumi\
-$python\
-$rust\
-$terraform\
-$vagrant\
+$os$username$hostname$directory\
 $kubernetes\
+$git_branch$git_commit$git_state$git_metrics$git_status\
+$docker_context\
+$package\
+$c$cmake$deno$golang$java$nodejs$python$ruby$rust$terraform$typst\
 $memory_usage\
-$env_var\
+$aws$gcloud$openstack$azure\
+$direnv$env_var\
 $custom\
-$sudo\
-$cmd_duration\
+$sudo$cmd_duration\
+$jobs$battery$time$status$container$shlvl\
 $line_break\
-$jobs\
-$battery\
-$time\
-$status\
-$shell\
-$character\
+$shell$character
 """
+
+[os]
+style = "bold blue"
+disabled = false
+
+[os.symbols]
+Alpine = "🏔️ "
+Amazon = "🙂 "
+Arch = "🎗️ "
+CentOS = "💠 "
+Debian = "🌀 "
+EndeavourOS = "🚀 "
+Fedora = "🎩 "
+FreeBSD = "😈 "
+Linux = "🐧 "
+Macos = "🍎 "
+NixOS = "❄️ "
+OpenBSD = "🐡 "
+openSUSE = "🦎 "
+OracleLinux = "🦴 "
+Raspbian = "🍓 "
+Redhat = "🎩 "
+RedHatEnterprise = "🎩 "
+SUSE = "🦎 "
+Ubuntu = "🎯 "
+Unknown = "❓ "
+Windows = "🪟 "
 
 [username]
 disabled = false
-show_always = true
+show_always = false
 style_root = "bold red"
 style_user = "green"
 format = "[$user]($style)[@](green)"
 
 [hostname]
 disabled = false
-ssh_only = false
+ssh_only = true
 format = "[$hostname](green): "
 trim_at = "."
 
+[directory]
+disable = false
+truncation_length = 3
+truncation_symbol = '…/'
+truncate_to_repo = false
+
+[memory_usage]
+disabled = false
+threshold = 66
+format = '$symbol[${ram_pct}]($style) '
+
 [git_branch]
 disabled = false
-#format = '[\[ $symbol$branch\]]($style) '
-format = '[\[ $branch \]]($style) '
+format = '[ $branch ]($style) '
 
-[kubernetes]
-format = 'on [⛵ $context \($namespace\)](red) '
-disabled = false
-
-[kubernetes.context_aliases]
-"arn:aws:eks:.*:cluster/(?P<cluster>[\\w-]+)" = "EKS_$cluster"
-"gke_.*_(?P<cluster>[\\w-]+)" = "GKE_$cluster"
+[docker_context]
+format = 'on [$symbol $context](blue bold)'
 
 [time]
 disabled = false
@@ -69,3 +82,11 @@ format = '[\[$time\]]($style) '
 [character]
 success_symbol = "[\\$](bold green)"
 error_symbol = "[\\$](bold red)"
+
+[shlvl]
+disabled = false
+format = '[$symbol]($style)'
+repeat = true
+symbol = '>'
+repeat_offset = 1
+threshold = 0
