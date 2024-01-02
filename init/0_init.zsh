@@ -12,7 +12,7 @@ done
 
 # install essentials
 if [ "$(uname -s)" = "Linux" ]; then
-  sudo apt install -y -qq build-essential
+  $DOT_PKG_MANAGER install $DOT_PKG_MANAGER_OPT build-essential
 fi
 
 # install [zinit](https://github.com/zdharma-continuum/zinit)

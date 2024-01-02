@@ -17,7 +17,6 @@ while true; do
     [Nn]*) echo "Bye." && exit 0 ;;
     *) echo "Please answer Yy or Nn." ;;
     esac
-    sed -i "" 's/export DOT_SETUPED=treu/export DOT_SETUPED=false/' "$ZDOTDIR"/.zshenv
 done
 
 os_type=$(uname -s)
@@ -66,4 +65,4 @@ if ! [ -f "$ZSHENV" ]; then
     printf "export ZDOTDIR=%s\nsource \$ZDOTDIR/.zshenv\n" "$ZDOTDIR" >"$ZSHENV"
 fi
 
-printfex "After restart terminal, please run SETUP.cont.zsh"
+printfex "Please restart terminal."

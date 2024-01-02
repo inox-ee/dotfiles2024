@@ -23,18 +23,10 @@ whence -w pip3 && whence -w trash || pip3 install -q trash-cli
 
 # install tree
 if ! whence -w tree; then
-    if [ "$(uname -s)" = "Linux" ]; then
-        sudo apt install -y -qq tree
-    elif [ "$(uname -s)" = "Darwin" ]; then
-        brew install -q tree
-    fi
+    $DOT_PKG_MANAGER install $DOT_PKG_MANAGER_OPT tree
 fi
 
 # install expect (for `unbuffer` command)
 if ! whence -w unbuffer; then
-    if [ "$(uname -s)" = "Linux" ]; then
-        sudo apt install -y -qq expect
-    elif [ "$(uname -s)" = "Darwin" ]; then
-        brew install -q expect
-    fi
+    $DOT_PKG_MANAGER install $DOT_PKG_MANAGER_OPT expect
 fi
