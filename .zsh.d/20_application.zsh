@@ -13,20 +13,9 @@ fi
 [ -f $ZDOTDIR/.config/.fzf.zsh ] && source $ZDOTDIR/.config/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
 
-# ? comment out because they spend a little bit time to load
-# # rbenv
-# if whence -w rbenv 1>/dev/null 2>&1; then
-#   eval "$(rbenv init -)"
-# fi
-
-# # nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-if whence -w pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+# jdx/rtx
+if [ -e "$HOME/.local/share/rtx" ]; then
+  eval "$(~/.local/share/rtx/bin/rtx activate zsh)"
 fi
 
 # pipenv
