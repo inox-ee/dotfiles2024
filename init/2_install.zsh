@@ -23,10 +23,10 @@ whence -w pip3 && whence -w trash || pip3 install -q trash-cli
 
 # install tree
 if ! whence -w tree; then
-    $DOT_PKG_MANAGER install $DOT_PKG_MANAGER_OPT tree
+    eval "$DOT_PKG_MANAGER" install "$DOT_PKG_MANAGER_OPT" tree
 fi
 
 # install expect (for `unbuffer` command)
 if ! whence -w unbuffer; then
-    $DOT_PKG_MANAGER install $DOT_PKG_MANAGER_OPT expect
+    eval "$DOT_PKG_MANAGER" install "$DOT_PKG_MANAGER_OPT" expect
 fi
