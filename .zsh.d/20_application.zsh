@@ -13,9 +13,9 @@ fi
 [ -f $ZDOTDIR/.config/.fzf.zsh ] && source $ZDOTDIR/.config/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
 
-# jdx/rtx
-if [ -e "$HOME/.local/share/rtx" ]; then
-  eval "$(~/.local/share/rtx/bin/rtx activate zsh)"
+# jdx/mise
+if [ -e "$HOME/.local/bin/mise" ]; then
+  eval "$(~/.local/bin/mise activate zsh)"
 fi
 
 # pipenv
