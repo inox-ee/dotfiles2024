@@ -3,6 +3,9 @@
 .zcompdump
 .chpwd-recent-dirs
 
+# local .zsh.d/*
+.zsh.d/**.local.zsh
+
 # vim config
 .config/.vim/*
 !.config/.vim/vimrc
