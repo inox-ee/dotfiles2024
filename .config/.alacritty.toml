@@ -1,3 +1,6 @@
+[env]
+TERM = "alacritty"
+
 [font]
 size = 16
 
@@ -56,4 +59,3 @@ action = "IncreaseFontSize"
 key = "Minus"
 mods = "Control"
 action = "DecreaseFontSize"
-
