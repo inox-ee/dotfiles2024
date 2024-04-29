@@ -4,7 +4,7 @@ if [ "$(uname)" = 'Darwin' ]; then
 else
   alias ls='ls --group-directories-first --human-readable --color -F'
 fi
-alias l='ls -la'
+alias ll='ls -la'
 alias rm='echo "This is not the command you are looking for."; false'
 alias ln='ln -iv'
 alias cl='clear'

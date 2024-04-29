@@ -20,9 +20,10 @@ fi
 
 # pipenv
 export PIPENV_VENV_IN_PROJECT=true
+export PIPENV_DONT_LOAD_ENV=1
 
 # go
-export GOPATH=$HOME/go
+#export GOPATH=$HOME/go
 
 # google cloud sdk
 export GCLOUDPATH=$HOME/.google-cloud-sdk

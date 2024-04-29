@@ -1,5 +1,9 @@
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-ic", "tmux a -t base || tmux new -t base"]
+
 [font]
-size = 16
+size = 12
 
 [font.normal]
 family = "UDEV Gothic 35NF"
@@ -56,3 +60,16 @@ action = "IncreaseFontSize"
 key = "Minus"
 mods = "Control"
 action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control"
+action = "CreateNewWindow"
+
+[[keyboard.bindings]]
+key = "¥"
+mods = "Control"
+chars = "\\"
+
+[window] # want to use forword-word but...
+option_as_alt = "Both" # commentout bacause \ cannot type

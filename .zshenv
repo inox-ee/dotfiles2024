@@ -1,5 +1,5 @@
 if [ "$(uname -s)" = "Darwin" ]; then
-    export DOT_SEDOPT="-i"""
+    export DOT_SEDOPT="-i''"
     export DOT_PKG_MANAGER="brew"
     export DOT_PKG_MANAGER_OPT="-q"
 elif [ "$(uname -s)" = "Linux" ]; then
