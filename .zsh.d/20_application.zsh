@@ -6,7 +6,7 @@ eval "$(starship init zsh)"
 
 # docker
 if [ "$(uname -s)" = "Darwin" ]; then
-  export DOCKER_HOST=unix://$HOME/.lima/docker_org/sock/docker.sock
+  export DOCKER_HOST=unix://$HOME/.lima/docker_intel_on_arm_on_arm/sock/docker.sock
 fi
 
 # fzf
@@ -22,8 +22,15 @@ fi
 export PIPENV_VENV_IN_PROJECT=true
 export PIPENV_DONT_LOAD_ENV=1
 
+# rye
+#source "$HOME/.rye/env"
+
 # go
 #export GOPATH=$HOME/go
 
 # google cloud sdk
 export GCLOUDPATH=$HOME/.google-cloud-sdk
+export GOOGLE_CLOUD_PROJECT=sre-common-all-ve0w42sd
+
+# rye
+source "$HOME/.rye/env"

@@ -8,3 +8,6 @@ export PAGER='less'
 
 # keybind
 bindkey -e
+
+# for GPG
+export GPG_TTY=$(tty)

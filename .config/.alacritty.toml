@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-ic", "tmux a -t base || tmux new -t base"]
 
@@ -6,8 +6,8 @@ args = ["-l", "-ic", "tmux a -t base || tmux new -t base"]
 size = 12
 
 [font.normal]
-family = "UDEV Gothic 35NF"
-style = "Regular"
+family = "Geist Mono" # "UDEV Gothic 35NF"
+style = "Light"
 
 # ! copy from one_dark
 # Default colors
@@ -73,3 +73,6 @@ chars = "\\"
 
 [window] # want to use forword-word but...
 option_as_alt = "Both" # commentout bacause \ cannot type
+
+[bell]
+command = { program =  "osascruot", args = ["-e", "beep"] }

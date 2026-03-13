@@ -53,3 +53,5 @@ function history-all { history -E 1 }
 #         && ${cmd} != (cl|clear)
 #   ]]
 # }
+# do not exit by ctrl+d
+setopt ignoreeof

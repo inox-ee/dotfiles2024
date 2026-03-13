@@ -58,7 +58,7 @@ function ssh_color() {
   if [[ -n $(printenv TMUX) ]] ; then
     # ===set bg===
     local pane_id=`tmux display -p '#{pane_id}'`
-    local ssh_dist=`echo "$@" | awk '{for(i=1;i<=NF;i++) if($i ~ /(kw1|os5|os1|ku1|mt1|tk2|kj1|ms1|os7|ql1|lc2|lb3|lb4|lb5|lm5)/) print $i}' RS=' '`
+    local ssh_dist=`echo "$@" | awk '{for(i=1;i<=NF;i++) if($i ~ /(kw1|os5|os1|ku1|mt1|tk2|kj1|ms1|os7|kw2|ql1|lc2|lb3|lb4|lb5|lm5)/) print $i}' RS=' '`
     if [[ -n $ssh_dist ]]; then
         if [[ $ssh_dist =~ (ql1|lc2|lb3|lb4|lb5|lm5) ]]; then
             #tmux select-pane -P 'bg=#1E1405'
